@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use RomaMb\Press\Facades\Press;
+
+class PressServiceProvider extends ServiceProvider
+{
+    public function boot(): void
+    {
+        Press::mergeFields($this->registerFields());
+    }
+
+    public function register(): void
+    {
+
+    }
+
+    protected function registerFields(): array
+    {
+        return [
+
+        ];
+    }
+}
